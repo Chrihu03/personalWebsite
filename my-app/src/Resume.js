@@ -1,15 +1,14 @@
 import './App.css';
 import { Link } from "react-router-dom";
 
-function App() {
+function Resume() {
   return (
     <div>
+      <Link to="/">Home</Link>
       <Link to="/battletech">Battletech</Link>
-      <Link to="/resume">Resume</Link>
-      <h1>Welcome to my app</h1>
+      <h1>Welcome to my Resume</h1>
     </div>
-
   );
 }
 
-export default App;
+export default Resume;
