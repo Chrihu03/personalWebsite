@@ -1,0 +1,13 @@
+.btTable, .btTh {
+    border: 1px solid black;
+}
+
+.btTd {
+    border: 1px solid black;
+    text-align: center;
+}
+
+.btTdCritical {
+    border: 2px solid red;
+    text-align: center;
+}
