@@ -3,8 +3,8 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import Resume from './Resume'
-import Battletech from './Battletech'
-import ClusterCalc from './ClusterCalc'
+import Battletech from './battletech/Battletech'
+import Helpers from './battletech/Helpers';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import reportWebVitals from './reportWebVitals';
 
@@ -16,7 +16,7 @@ root.render(
         <Route path="/" element={<App />} />
         <Route path="/resume" element={<Resume />} />
         <Route path="/battletech" element={<Battletech />}>
-          <Route path="clusterCalc" element={<ClusterCalc />} />
+          <Route path="helpers" element={<Helpers />} />
         </Route>
       </Routes>
     </BrowserRouter>
