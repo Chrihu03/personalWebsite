@@ -36,9 +36,11 @@ function ClusterCalc() {
   if (data.length > 0) {
     const mechSide = document.getElementById('mechSide').value
     if (mechSide === 'front') {
-        side = 'Front/Back';
+        side = 'Front';
     } else if (mechSide === 'right') {
         side = 'Right';
+    } else if (mechSide === 'back') {
+        side = 'Back';
     }
   }
   return (

@@ -11,7 +11,7 @@ function Battletech() {
               <a className="nav-link" href="/">Home</a>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="/resume">Resume</a>
+              <a className="nav-link" href="/programming">Programming</a>
             </li>
             <li className="nav-item">
               <a className="nav-link active" href="/battletech">Battletech</a>

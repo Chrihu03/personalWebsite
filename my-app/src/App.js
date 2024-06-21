@@ -1,5 +1,4 @@
 import './App.css';
-import { Link } from "react-router-dom";
 
 function App() {
   return (
@@ -12,7 +11,7 @@ function App() {
           <a class="nav-link active" href="/">Home</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="/resume">Resume</a>
+          <a class="nav-link" href="/programming">Programming</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="/battletech">Battletech</a>
@@ -20,7 +19,7 @@ function App() {
       </ul>
     </div>
   </nav>
-  <h1>Welcome to my Page.</h1>
+  <h1>Page coming soon.</h1>
 </div>
 
   );

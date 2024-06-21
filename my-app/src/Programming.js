@@ -1,7 +1,7 @@
 import './App.css';
-import { Link } from "react-router-dom";
 
-function Resume() {
+
+function Programming() {
   return (
     <div>
       <nav class="navbar navbar-expand-sm bg-light navbar-light">
@@ -11,7 +11,7 @@ function Resume() {
               <a class="nav-link" href="/">Home</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link active" href="/resume">Resume</a>
+              <a class="nav-link active" href="/programming">Programming</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="/battletech">Battletech</a>
@@ -20,9 +20,9 @@ function Resume() {
         </div>
       </nav>
       
-      <h1>Welcome to my Resume</h1>
+      <h1>Page coming soon.</h1>
     </div>
   );
 }
 
-export default Resume;
+export default Programming;
