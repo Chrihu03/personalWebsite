@@ -1,6 +1,6 @@
-import '../App.css';
+import '../Main/App.css';
 import './Battletech.css';
-import { getMechLocation } from "./Common.js";
+import { getMechLocation, getClusterHits, randomInt } from "./Common.js";
 import { useState } from "react";
 
 function calc(callback) {
@@ -30,8 +30,14 @@ function calc(callback) {
     callback(result);
 }
 
+function calculateHits() {
+    const roll = randomInt(1,6) + randomInt(1,6);
+    return([getClusterHits(document.getElementById('vollySize').value, roll), roll]);
+}
+
 function ClusterCalc() {
   const [data, setData] = useState([]);
+  const [hitData, setHitData] = useState([getClusterHits(18, 2), 2]);
   let side = 'Left';
   if (data.length > 0) {
     const mechSide = document.getElementById('mechSide').value
@@ -43,10 +49,23 @@ function ClusterCalc() {
         side = 'Back';
     }
   }
+  const clusterOptions = [];
+  for (let i = 2; i <= 30; i++) {
+    clusterOptions.push(<option value={i-2}>{i}</option>);
+  }
+  clusterOptions.push(<option value={29}>40</option>);
   return (
     <div>
         <h2>Cluster Calculator</h2>
 
+        <label htmlFor="vollySize">Volly Size: </label>
+        <select id="vollySize" name="vollySize" size="1" defaultValue={18}>
+            {clusterOptions}
+        </select>
+        <button type='button' onClick={() => setHitData(calculateHits())} ># of Hits</button>
+        <br/>
+        <h5>Number of Hits: {hitData[0]} with a roll of {hitData[1]}</h5>
+        <hr/>
         <label htmlFor='totalDamage'>Total Damage:</label>
         <input type='number' id='totalDamage' name='totalDamage' min='0' max='100' defaultValue={20}/>
         <br/>

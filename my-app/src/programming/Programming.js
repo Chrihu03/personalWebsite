@@ -1,16 +1,17 @@
 import '../Main/App.css';
-import { Outlet } from "react-router-dom";
 import NavBar from '../NavBar';
+import { Outlet } from "react-router-dom";
 
-function Battletech() {
+
+function Programming() {
   return (
-    <div className='btDiv'>
+    <div>
       <NavBar />
       <div className='container'>
-        <Outlet/>
+      <Outlet/>
       </div>
     </div>
   );
 }
 
-export default Battletech;
+export default Programming;
